@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+    text-decoration: solid;
+    color:rgb(0, 0, 22);
+    text-decoration: solid;
+    font-weight: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    font-style: oblique;
+}
+
+body{
+    background-image: url(https://th.bing.com/th/id/R.a3c631d4c44efb576c64017becf56b01?rik=E6fedOKHWVi4vQ&riu=http%3a%2f%2fwww.deskcar.com%2fdesktop%2felse%2f200855211036%2f19.jpg&ehk=3S3PPWWr%2f%2bFIAIsuxR6%2b7SSF%2bFGFB9x96mWmOJfsXLw%3d&risl=&pid=ImgRaw&r=0);
+}
+
+.main{
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+}
+
+main textarea{
+    border-radius: 10px;
+    background-color: rgb(222, 243, 243);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 0 auto;
+    padding: 20px;
+
+}
+
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 0 auto;
+    padding: 5px;
+}
+
+#mensaje{
+    border: none;
+    background-color:rgb(236, 241, 247);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+#encriptar, #desencriptar, #copiar{
+    width: 150px;
+    margin: 20px 6px 10px 200px;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+
+#encriptar{
+    background: rgb(219, 202, 202);
+}
+
+#desencriptar{
+    background: rgb(172, 225, 241);
+}
+
+#copiar{
+    background:rgb(62, 62, 180);
+
+}    
+
+footer{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    align-items: center;
+     text-align: center;
+    font-style: oblique;
+}

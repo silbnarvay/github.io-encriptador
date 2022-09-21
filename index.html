@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title>
+        <h1>AluraOne code &#128477&#128274</h1> 
+        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="reset.css">
+    </head>
+    <body>
+        <div class="contenedor">
+             <main>
+                <form>
+                    <textarea cols="40" rows="10" id="mensaje" class="input-ingreso" name="texto" onkeyUP="this.value = this.value.toLowerCase();"placeholder="Ingresá el texto..."></textarea>
+                    <textarea cols="40" rows="10" id="resultado" class="input-resultado" placeholder="Encriptado..."></textarea>   
+                </form>
+                <p>&#10071;Solo letras minúsculas y sin acento</p>
+                <div class="contenedor">                  
+                   <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                    <button id="copiar">Copiar</button> 
+                </div>
+            </main>
+        </div>
+        <br> <br> <br>
+        <footer>
+            <p>Silvia Narvay -&#169Derechos Reservados 2022- Buenos Aires. Argentina.</p>
+        </footer>
+
+        <script>
+
+//variables para encriptar, desencriptar y quitar acentos
+            var inputMensaje = document.querySelector("#mensaje");
+            var inputResultado = document.querySelector("#resultado");
+            var contador = document.getElementById("contador");
+            var botonEncriptar = document.querySelector("#encriptar");
+            var botonDesencriptar = document.querySelector("#desencriptar");
+            var botonCopiar = document.querySelector("#copiar");
+            function encriptar(){
+            var mensaje = inputMensaje.value;
+            var palabraOculta = mensaje.replaceAll("e","enter")
+                                        .replaceAll("i","imes")
+                                        .replaceAll("a","ai")
+                                        .replaceAll("o","ober")
+                                        .replaceAll("u","ufat")
+                                        .normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+                inputResultado.value= palabraOculta;
+}
+//funcion para desencriptar
+            function desencriptar(){
+            var mensaje = inputMensaje.value;
+            var desencriptaMensaje = mensaje.replaceAll("enter","e")
+                                            .replaceAll("imes","i")
+                                            .replaceAll("ai","a")
+                                            .replaceAll("ober","o")
+                                            .replaceAll("ufat","u");
+                inputResultado.value= desencriptaMensaje;
+}
+//funcion para copiar
+            function copiar(){
+            var mensajeEncriptado = document.getElementById('resultado');
+            mensajeEncriptado.select();
+            document.execCommand('copy');
+            inputMensaje.value = "";
+
+}
+//botones evento
+            botonEncriptar.onclick = encriptar;
+            botonDesencriptar.onclick = desencriptar;
+            botonCopiar.onclick= copiar; 
+
+        </script>
+    </body>
+
+
+
+</html> 
